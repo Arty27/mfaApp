@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://arty27.github.io/mfaApp",
   "scripts": {
-    "predeploy": "npm run dist",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
