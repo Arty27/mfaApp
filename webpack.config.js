@@ -44,7 +44,9 @@ module.exports = (_, argv) => ({
       name: "mfaApp",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./App": "./src/App.jsx",
+      },
       shared: {
         ...deps,
         react: {
