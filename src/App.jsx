@@ -10,9 +10,7 @@ const App = () => (
     <Router>
       <Navbar />
       Hello World
-      <Routes>
-        <Route path="/" element={<Pokemon />} />
-      </Routes>
+      <Pokemon />
     </Router>
   </div>
 );
