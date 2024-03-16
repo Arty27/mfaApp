@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/Pokemon.css";
+import { data } from "../Constants/data";
 
 const Pokemon = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -13,7 +14,7 @@ const Pokemon = () => {
     try {
       setLoading(true);
       const arr = [];
-      for (let i = 1; i <= 20; i++) {
+      for (let i = 1; i <= 50; i++) {
         const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         const data = await result.json();
         const pokemon = {
@@ -24,6 +25,7 @@ const Pokemon = () => {
         };
         arr.push(pokemon);
       }
+      console.log(arr);
       setPokemons(arr);
     } catch (error) {
       console.log("Error whilw getting pokemons,", error);
@@ -34,8 +36,7 @@ const Pokemon = () => {
 
   return (
     <div>
-      <h1>Pokemons</h1>
-      {loading ? (
+      {/* {loading ? (
         <span>Loading</span>
       ) : (
         <div className="pokemons-list">
@@ -46,7 +47,16 @@ const Pokemon = () => {
             </div>
           ))}
         </div>
-      )}
+      )} */}
+
+      <div className="pokemons-list">
+        {data.map((pokemon) => (
+          <div className="pokemon" key={pokemon.name}>
+            <img alt="pokemons" src={pokemon.image} />
+            <div key={pokemon.name}>{pokemon.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
