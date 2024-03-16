@@ -9,6 +9,7 @@ const App = () => (
   <div className="container">
     <Router>
       <Navbar />
+      Hello World
       <Routes>
         <Route path="/" element={<Pokemon />} />
       </Routes>

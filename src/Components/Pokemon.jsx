@@ -26,6 +26,7 @@ const Pokemon = () => {
       }
       setPokemons(arr);
     } catch (error) {
+      console.log("Error whilw getting pokemons,", error);
     } finally {
       setLoading(false);
     }
@@ -33,6 +34,7 @@ const Pokemon = () => {
 
   return (
     <div>
+      <h1>Pokemons</h1>
       {loading ? (
         <span>Loading</span>
       ) : (
