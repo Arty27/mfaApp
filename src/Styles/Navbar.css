@@ -7,4 +7,6 @@
   background-color: #3498db;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
 }

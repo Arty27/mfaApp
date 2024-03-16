@@ -5,11 +5,13 @@ import Pokemon from "./Components/Pokemon";
 import Navbar from "./Components/Navbar";
 
 const App = () => (
-  <div className="container">
-    <Router>
-      <Navbar />
-      <Pokemon />
-    </Router>
+  <div>
+    <Navbar />
+    <div className="container">
+      <Router>
+        <Pokemon />
+      </Router>
+    </div>
   </div>
 );
 export default App;

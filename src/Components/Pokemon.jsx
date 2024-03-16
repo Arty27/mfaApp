@@ -53,7 +53,7 @@ const Pokemon = () => {
         {data.map((pokemon) => (
           <div className="pokemon" key={pokemon.name}>
             <img alt="pokemons" src={pokemon.image} />
-            <div key={pokemon.name}>{pokemon.name}</div>
+            <div key={pokemon.name}>{pokemon.name.toLocaleUpperCase()}</div>
           </div>
         ))}
       </div>
